@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Lamps</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .lamps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+      padding: 30px;
+
+      list-style: none;
+    }
+
+    .lamps li {
+      position: relative;
+
+      width: 200px;
+      padding: 20px;
+      padding-top: 50px;
+      text-align: center;
+    }
+
+    .lamps li::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 0 auto;
+
+      background-color: blue;
+    }
+
+    .lamps li:nth-child(2n)::before {
+      background-color: yellow;
+    }
+
+    .lamps li:nth-child(3n)::before {
+      background-color: red;
+    }
+
+    .lamps li:nth-child(4n)::before {
+      background-color: green;
+    }
+
+    .lamps li.disabled::before {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+
+<ul class="lamps" data-word="Привет">
+  <li class="" data-lamp="А">А</li>
+  <li class="disabled" data-lamp="Б">Б</li>
+  <li class="disabled" data-lamp="В">В</li>
+  <li class="disabled" data-lamp="Г">Г</li>
+  <li class="disabled" data-lamp="Д">Д</li>
+  <li class="" data-lamp="Е">Е</li>
+  <li class="disabled" data-lamp="Ё">Ё</li>
+  <li class="disabled" data-lamp="Ж">Ж</li>
+  <li class="disabled" data-lamp="З">З</li>
+  <li class="" data-lamp="И">И</li>
+  <li class="disabled" data-lamp="Й">Й</li>
+  <li class="disabled" data-lamp="К">К</li>
+  <li class="disabled" data-lamp="Л">Л</li>
+  <li class="disabled" data-lamp="M">M</li>
+  <li class="disabled" data-lamp="Н">Н</li>
+  <li class="" data-lamp="О">О</li>
+  <li class="" data-lamp="П">П</li>
+  <li class="disabled" data-lamp="Р">Р</li>
+  <li class="disabled" data-lamp="С">С</li>
+  <li class="disabled" data-lamp="Т">Т</li>
+  <li class="disabled" data-lamp="У">У</li>
+  <li class="disabled" data-lamp="Ф">Ф</li>
+  <li class="disabled" data-lamp="Х">Х</li>
+  <li class="disabled" data-lamp="Ц">Ц</li>
+  <li class="disabled" data-lamp="Ш">Ш</li>
+  <li class="" data-lamp="Щ">Щ</li>
+  <li class="disabled" data-lamp="Ъ">Ъ</li>
+  <li class="disabled" data-lamp="Ы">Ы</li>
+  <li class="disabled" data-lamp="Ь">Ь</li>
+  <li class="disabled" data-lamp="Э">Э</li>
+  <li class="disabled" data-lamp="Ю">Ю</li>
+  <li class="disabled" data-lamp="Я">Я</li>
+</ul>
+
+<script src="scripts.js"></script>
+</body>
+</html>
