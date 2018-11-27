@@ -65,56 +65,88 @@
     .lamps li.disabled::before {
       background-color: #333333;
     }
+
+    .hidden {
+      display: none;
+    }
+
+    .button {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      margin-top: 30px;
+      padding: 30px;
+
+      font-size: 20px;
+      color: #cbcbcb;
+
+      background-color: darkred;
+      border: none;
+    }
+
+    .button.hidden {
+      display: none;
+    }
+
+    .button:hover {
+      background-color: #740000;
+    }
   </style>
 </head>
 <body>
 
-<ul class="lamps" data-word="мыбудемзагораться">
-  <li class="disabled" data-lamp="А">А</li>
-  <li class="disabled" data-lamp="Б">Б</li>
-  <li class="disabled" data-lamp="В">В</li>
-  <li class="disabled" data-lamp="Г">Г</li>
-  <li class="disabled" data-lamp="Д">Д</li>
-  <li class="disabled" data-lamp="Е">Е</li>
-  <li class="disabled" data-lamp="Ё">Ё</li>
-  <li class="disabled" data-lamp="Ж">Ж</li>
-  <li class="disabled" data-lamp="З">З</li>
-  <li class="disabled" data-lamp="И">И</li>
-  <li class="disabled" data-lamp="Й">Й</li>
-  <li class="disabled" data-lamp="К">К</li>
-  <li class="disabled" data-lamp="Л">Л</li>
-  <li class="disabled" data-lamp="М">М</li>
-  <li class="disabled" data-lamp="Н">Н</li>
-  <li class="disabled" data-lamp="О">О</li>
-  <li class="disabled" data-lamp="П">П</li>
-  <li class="disabled" data-lamp="Р">Р</li>
-  <li class="disabled" data-lamp="С">С</li>
-  <li class="disabled" data-lamp="Т">Т</li>
-  <li class="disabled" data-lamp="У">У</li>
-  <li class="disabled" data-lamp="Ф">Ф</li>
-  <li class="disabled" data-lamp="Х">Х</li>
-  <li class="disabled" data-lamp="Ц">Ц</li>
-  <li class="disabled" data-lamp="Ш">Ш</li>
-  <li class="disabled" data-lamp="Щ">Щ</li>
-  <li class="disabled" data-lamp="Ъ">Ъ</li>
-  <li class="disabled" data-lamp="Ы">Ы</li>
-  <li class="disabled" data-lamp="Ь">Ь</li>
-  <li class="disabled" data-lamp="Э">Э</li>
-  <li class="disabled" data-lamp="Ю">Ю</li>
-  <li class="disabled" data-lamp="Я">Я</li>
-</ul>
+<button class="button" type="button">Погнали!</button>
 
-<audio class="music" autoplay loop>
-  <source src="audio/sound.ogg" type="audio/ogg; codecs=vorbis">
-  <source src="audio/sound.mp3" type="audio/mpeg">
-  <source src="audio/sound.wav" type="audio/wav">
-</audio>
+<div class="block hidden">
 
-<audio class="electric">
-  <source src="audio/electric.ogg" type="audio/ogg; codecs=vorbis">
-  <source src="audio/electric.mp3" type="audio/mpeg">
-  <source src="audio/electric.wav" type="audio/wav">
-</audio>
+  <ul class="lamps" data-word="мызагораемся">
+    <li class="disabled" data-lamp="А">А</li>
+    <li class="disabled" data-lamp="Б">Б</li>
+    <li class="disabled" data-lamp="В">В</li>
+    <li class="disabled" data-lamp="Г">Г</li>
+    <li class="disabled" data-lamp="Д">Д</li>
+    <li class="disabled" data-lamp="Е">Е</li>
+    <li class="disabled" data-lamp="Ё">Ё</li>
+    <li class="disabled" data-lamp="Ж">Ж</li>
+    <li class="disabled" data-lamp="З">З</li>
+    <li class="disabled" data-lamp="И">И</li>
+    <li class="disabled" data-lamp="Й">Й</li>
+    <li class="disabled" data-lamp="К">К</li>
+    <li class="disabled" data-lamp="Л">Л</li>
+    <li class="disabled" data-lamp="М">М</li>
+    <li class="disabled" data-lamp="Н">Н</li>
+    <li class="disabled" data-lamp="О">О</li>
+    <li class="disabled" data-lamp="П">П</li>
+    <li class="disabled" data-lamp="Р">Р</li>
+    <li class="disabled" data-lamp="С">С</li>
+    <li class="disabled" data-lamp="Т">Т</li>
+    <li class="disabled" data-lamp="У">У</li>
+    <li class="disabled" data-lamp="Ф">Ф</li>
+    <li class="disabled" data-lamp="Х">Х</li>
+    <li class="disabled" data-lamp="Ц">Ц</li>
+    <li class="disabled" data-lamp="Ш">Ш</li>
+    <li class="disabled" data-lamp="Щ">Щ</li>
+    <li class="disabled" data-lamp="Ъ">Ъ</li>
+    <li class="disabled" data-lamp="Ы">Ы</li>
+    <li class="disabled" data-lamp="Ь">Ь</li>
+    <li class="disabled" data-lamp="Э">Э</li>
+    <li class="disabled" data-lamp="Ю">Ю</li>
+    <li class="disabled" data-lamp="Я">Я</li>
+  </ul>
+
+  <audio class="music" loop>
+    <source src="audio/sound.ogg" type="audio/ogg; codecs=vorbis">
+    <source src="audio/sound.mp3" type="audio/mpeg">
+    <source src="audio/sound.wav" type="audio/wav">
+  </audio>
+
+  <audio class="electric">
+    <source src="audio/electric.ogg" type="audio/ogg; codecs=vorbis">
+    <source src="audio/electric.mp3" type="audio/mpeg">
+    <source src="audio/electric.wav" type="audio/wav">
+  </audio>
+</div>
+
 <!--
 <audio class="glass">
   <source src="audio/glass.ogg" type="audio/ogg; codecs=vorbis">

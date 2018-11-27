@@ -1,8 +1,10 @@
+var button = document.querySelector('.button');
+var block = document.querySelector('.block');
+
 var word = document.querySelector('[data-word]').dataset.word;
 var wordArray = word.split('');
-
-// var glass = document.querySelector('.glass');
 var electric = document.querySelector('.electric');
+var music = document.querySelector('.music');
 
 var rr = function(min, max) { return Math.random() * (max-min) + min; };
 
@@ -13,7 +15,7 @@ var lampOn = function(lamp) {
 
 var lampOff = function(lamp) {
   lamp.classList.add('disabled');
-  electric.stop();
+  electric.pause();
 };
 
 function lampsLight () {
@@ -62,4 +64,9 @@ function lampsLight () {
   return timeDelay;
 }
 
-setInterval(lampsLight, lampsLight());
+button.addEventListener('click', function () {
+  block.classList.remove('hidden');
+  button.classList.add('hidden');
+  music.play();
+  setInterval(lampsLight, lampsLight());
+});
