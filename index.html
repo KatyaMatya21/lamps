@@ -2,10 +2,12 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
   <title>Lamps</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Caveat", cursive;
+      font-size: 25px;
       color: #ffffff;
 
       background-color: black;
@@ -63,36 +65,11 @@
     .lamps li.disabled::before {
       background-color: #333333;
     }
-
-    form {
-      width: 400px;
-      margin: 0 auto;
-    }
-
-    input {
-      width: 300px;
-      padding: 10px;
-    }
-
-    button {
-      padding: 10px;
-    }
-
-    .result {
-      width: 500px;
-      padding: 15px 0;
-      margin: 0 auto;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
 
-<!--<div class="result">
-  Привет
-</div>-->
-
-<ul class="lamps" data-word="Привет">
+<ul class="lamps" data-word="мыбудемзагораться">
   <li class="disabled" data-lamp="А">А</li>
   <li class="disabled" data-lamp="Б">Б</li>
   <li class="disabled" data-lamp="В">В</li>
@@ -106,7 +83,7 @@
   <li class="disabled" data-lamp="Й">Й</li>
   <li class="disabled" data-lamp="К">К</li>
   <li class="disabled" data-lamp="Л">Л</li>
-  <li class="disabled" data-lamp="M">M</li>
+  <li class="disabled" data-lamp="М">М</li>
   <li class="disabled" data-lamp="Н">Н</li>
   <li class="disabled" data-lamp="О">О</li>
   <li class="disabled" data-lamp="П">П</li>
@@ -138,17 +115,12 @@
   <source src="audio/electric.mp3" type="audio/mpeg">
   <source src="audio/electric.wav" type="audio/wav">
 </audio>
-
+<!--
 <audio class="glass">
   <source src="audio/glass.ogg" type="audio/ogg; codecs=vorbis">
   <source src="audio/glass.mp3" type="audio/mpeg">
   <source src="audio/glass.wav" type="audio/wav">
-</audio>
-
-<!--<form action="#">
-  <input type="text" placeholder="Введите слово">
-  <button type="button">Го</button>
-</form>-->
+</audio>-->
 
 <script src="scripts.js"></script>
 </body>
