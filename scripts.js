@@ -13,7 +13,7 @@ var lampOn = function(lamp) {
 
 var lampOff = function(lamp) {
   lamp.classList.add('disabled');
-  electric.stop();
+  electric.pause();
 };
 
 function lampsLight () {
